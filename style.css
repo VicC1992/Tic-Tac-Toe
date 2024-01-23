@@ -1,0 +1,95 @@
+main {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itsTurnTo {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#itsTurnTo{
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(211, 78, 20);
+}
+
+.h1 {
+    position: relative;
+    font-size: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(182, 101, 35);
+    justify-content: center;
+    text-align: center;
+}
+
+.X {
+    color: rgb(235, 146, 12);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.O {
+    color:rgba(1, 5, 1, 0.883);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#board {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    flex-wrap: wrap;
+    display: flex;
+    background: rgb(168, 144, 83);
+    border-radius: 24px;
+    box-shadow: 3px 5px 1px 1px rgba(0, 0, 0, 0.135);
+}
+.square {
+    position: relative;
+    display: flex;
+    padding: 8px;
+    width: 122px;
+    height: 122px;
+    margin: 5px;
+    border: 1px solid #D3D3D3;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+}
+.square:hover {
+    background-color: #FFFFE0;
+}
+.winnerBlock {
+   margin-top: 24px;
+   display: none;
+   flex-direction: column; 
+}
+.winnerSpan {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: rgb(211, 78, 20);
+}
+
+.btnRestartGame {
+    padding: 12px;
+    background: rgb(207, 118, 46);
+    color: white;
+    font-weight:600;
+    text-align: center;
+    border-radius: 12px;
+}
+.btnRestartGame:hover {
+    background: rgba(241, 192, 31, 0.587);
+}
