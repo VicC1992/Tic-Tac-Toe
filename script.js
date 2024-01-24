@@ -28,7 +28,7 @@ square.forEach((item) => {
             }
             ++clickCounter;
             whoIsNext();
-            checkWinnner();
+            checkWinner();
         }
     })
 })
@@ -44,7 +44,7 @@ const winPositions = [
     [2, 5, 8]
 ];
 
-function checkWinnner() {
+function checkWinner() {
     for (let i = 0; i < winPositions.length; ++i) {
         if (square[winPositions[i][0]].textContent != "" && square[winPositions[i][0]].textContent === square[winPositions[i][1]].textContent && square[winPositions[i][1]].textContent === square[winPositions[i][2]].textContent) {
             winner = `Winner is: ${square[winPositions[i][0]].textContent}`;
