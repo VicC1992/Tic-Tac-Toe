@@ -28,7 +28,7 @@ square.forEach((item) => {
             }
             ++clickCounter;
             whoIsNext();
-            whoWin();
+            checkWinnner();
         }
     })
 })
@@ -44,14 +44,10 @@ const winPositions = [
     [2, 5, 8]
 ];
 
-function whoWin() {
+function checkWinnner() {
     for (let i = 0; i < winPositions.length; ++i) {
-        if (square[winPositions[i][0]].classList.contains("X") && square[winPositions[i][1]].classList.contains("X") && square[winPositions[i][2]].classList.contains("X")) {
-            winner = "Winner is:X";
-            gameOver(winner);
-            return 1;
-        } else if (square[winPositions[i][0]].classList.contains("O") && square[winPositions[i][1]].classList.contains("O") && square[winPositions[i][2]].classList.contains("O")) {
-            winner = "Winner is:O";
+        if (square[winPositions[i][0]].textContent != "" && square[winPositions[i][0]].textContent === square[winPositions[i][1]].textContent && square[winPositions[i][1]].textContent === square[winPositions[i][2]].textContent) {
+            winner = `Winner is: ${square[winPositions[i][0]].textContent}`;
             gameOver(winner);
         } else if (clickCounter >= 9 && winner != "X" && winner != "O") {
             winner = "Draw !!!";
